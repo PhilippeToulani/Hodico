@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qZU-fP-I0n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qZU-fP-I0n">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -177,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="-627" y="857"/>
         </scene>
-        <!--Masroufak View Controller - Masroufak-->
+        <!--Masroufak-->
         <scene sceneID="zKW-M3-0J1">
             <objects>
                 <viewController title="Masroufak" id="Jze-u8-aOs" customClass="MasroufakViewController" sceneMemberID="viewController">
@@ -323,7 +322,7 @@
             </objects>
             <point key="canvasLocation" x="687" y="-134"/>
         </scene>
-        <!--Comments View Controller - Comments-->
+        <!--Comments-->
         <scene sceneID="Nau-o3-uAN">
             <objects>
                 <viewController title="Comments" id="6D0-4i-DuZ" customClass="CommentsViewController" sceneMemberID="viewController">
@@ -371,14 +370,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="0CU-3k-jwQ">
-                                                    <rect key="frame" x="209" y="11" width="98" height="21"/>
+                                                    <rect key="frame" x="209" y="11" width="97.5" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.10588236149999999" green="0.29019609089999998" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view tag="200" contentMode="scaleToFill" id="met-nL-6xv" customClass="StarRatingControl">
-                                                    <rect key="frame" x="20" y="10" width="160" height="22"/>
+                                                    <rect key="frame" x="19.5" y="9.5" width="160" height="22.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -484,7 +483,7 @@
             </objects>
             <point key="canvasLocation" x="1053" y="-134"/>
         </scene>
-        <!--Tax View Controller - Akhbar-->
+        <!--Akhbar-->
         <scene sceneID="JS0-au-h4h">
             <objects>
                 <viewController storyboardIdentifier="TaxViewController" title="Akhbar" id="9vE-v6-z9S" customClass="TaxViewController" sceneMemberID="viewController">
@@ -689,7 +688,7 @@
             </objects>
             <point key="canvasLocation" x="1048" y="540"/>
         </scene>
-        <!--Zeitak View Controller - Zeitak-->
+        <!--Zeitak-->
         <scene sceneID="YWU-Sh-h0N">
             <objects>
                 <viewController title="Zeitak" id="NQP-Ut-Ue1" customClass="ZeitakViewController" sceneMemberID="viewController">
@@ -724,27 +723,6 @@
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="315572400">
                                     <!--2011-01-01 11:00:00 +0000-->
                                 </date>
-                                <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <data key="data">
-VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
-y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
-5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
-8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
-AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
-DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
-HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
-KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
-OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
-Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
-VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
-Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
-cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
-f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
-AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</data>
-                                </timeZone>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" id="CCL-QX-o9W">
                                 <rect key="frame" x="172" y="104" width="123" height="30"/>
@@ -806,7 +784,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="551" y="473"/>
         </scene>
-        <!--Calls View Controller - Calls-->
+        <!--Calls-->
         <scene sceneID="0Ny-yb-ZfG">
             <objects>
                 <viewController title="Calls" id="ZfC-1c-K79" customClass="CallsViewController" sceneMemberID="viewController">
@@ -908,7 +886,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1185" y="-850"/>
         </scene>
-        <!--News View Controller - News-->
+        <!--News-->
         <scene sceneID="Oyd-lW-nqD">
             <objects>
                 <viewController storyboardIdentifier="News" title="News" id="HHw-p3-VQK" customClass="NewsViewController" sceneMemberID="viewController">
@@ -948,7 +926,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="N0l-9j-mnw">
-                                <rect key="frame" x="0.0" y="78.999999252218444" width="320" height="458"/>
+                                <rect key="frame" x="0.0" y="78.999998220628385" width="320" height="458"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -964,7 +942,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="500" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TableIcon" id="wIy-Rn-Gwm" customClass="CustomUIImageView">
-                                                    <rect key="frame" x="8" y="2" width="50" height="50"/>
+                                                    <rect key="frame" x="8" y="2.5" width="50" height="50"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="501" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" id="6ra-4f-xlL">
                                                     <rect key="frame" x="70" y="5" width="230" height="21"/>
@@ -974,7 +952,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="502" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" id="l24-V5-7od">
-                                                    <rect key="frame" x="70" y="28" width="230" height="21"/>
+                                                    <rect key="frame" x="70" y="28.5" width="230" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                                     <color key="textColor" red="0.1176470667" green="0.33333334329999997" blue="0.65098041299999998" alpha="1" colorSpace="deviceRGB"/>
@@ -1022,7 +1000,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="828" y="-850"/>
         </scene>
-        <!--Prices View Controller - Prices-->
+        <!--Prices-->
         <scene sceneID="yEw-Nv-cwp">
             <objects>
                 <viewController storyboardIdentifier="Prices" title="Prices" id="JBV-KV-DDK" customClass="PricesViewController" sceneMemberID="viewController">
@@ -1187,7 +1165,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-801" y="285"/>
         </scene>
-        <!--Station Map View Controller - StationMap-->
+        <!--StationMap-->
         <scene sceneID="C2d-76-GSL">
             <objects>
                 <viewController title="StationMap" id="WAc-1W-rd3" customClass="StationMapViewController" sceneMemberID="viewController">
@@ -1200,7 +1178,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qoR-w7-hT1">
-                                <rect key="frame" x="0.0" y="154.9999964281501" width="320" height="363"/>
+                                <rect key="frame" x="0.0" y="154.99999787315835" width="320" height="363"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1321,7 +1299,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-151" y="-980"/>
         </scene>
-        <!--Delivery View Controller - Delivery-->
+        <!--Delivery-->
         <scene sceneID="KTV-p3-D5E">
             <objects>
                 <viewController title="Delivery" id="sHV-KE-fs3" customClass="DeliveryViewController" sceneMemberID="viewController">
@@ -1473,7 +1451,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="213" y="-952"/>
         </scene>
-        <!--Stations View Controller - Stations-->
+        <!--Stations-->
         <scene sceneID="LVy-HD-39Z">
             <objects>
                 <viewController storyboardIdentifier="Stations" title="Stations" id="PLN-dV-nKL" customClass="StationsViewController" sceneMemberID="viewController">
@@ -1486,7 +1464,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="RA8-h9-E9p">
-                                <rect key="frame" x="0.0" y="87" width="320" height="434"/>
+                                <rect key="frame" x="0.0" y="86.999998851031123" width="320" height="434"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ma7attatak" id="MI8-If-sAa">

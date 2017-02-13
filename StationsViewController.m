@@ -9,7 +9,6 @@
 #import "StationsViewController.h"
 #import "DisplayMap.h"
 
-
 #define METERS_PER_MILE 1609.344
 #define url @"http://www.hodico.com/mAdmin/stations_getdata.php"
 
@@ -231,12 +230,12 @@ static NSMutableArray *jsonArray;
     MKPointAnnotation *annotation = [view annotation];
     
     
-    MKPlacemark* place = [[MKPlacemark alloc] initWithCoordinate:annotation.coordinate addressDictionary:nil];
-    MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];
+    //MKPlacemark* place = [[MKPlacemark alloc] initWithCoordinate:annotation.coordinate addressDictionary:nil];
+    //MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];
     
     
     NSString *Coord = [NSString stringWithFormat:@"comgooglemaps://?daddr=%f,%f&views=traffic",annotation.coordinate.latitude,annotation.coordinate.longitude];
-    if ([[UIApplication sharedApplication] canOpenURL:
+   if ([[UIApplication sharedApplication] canOpenURL:
          [NSURL URLWithString:@"comgooglemaps://"]]) {
         [[UIApplication sharedApplication] openURL:
          [NSURL URLWithString:Coord]];
