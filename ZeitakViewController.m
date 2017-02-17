@@ -20,6 +20,7 @@
 
 
 @synthesize AverageKM,CurrentMileage,KMSProvided,DatePicker;
+
 - (IBAction)SetReminderButton:(id)sender {
     if ([AverageKM.text isEqualToString:@""] || [KMSProvided.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Please fill all info" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:Nil, nil] ;

@@ -49,6 +49,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSRemindersUsageDescription</key>
+	<string>Add Reminders for Oil Change</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>7LED.ttf</string>

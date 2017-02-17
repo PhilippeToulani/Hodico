@@ -336,39 +336,61 @@
 #pragma pickeer View
 -(void)showPickerWithTag:(NSInteger)Tag
 {
-    if (Tag > 0 && Tag < 4) {
+    if (Tag > 0 && Tag < 4)
+    {
+        UIAlertController* selectBox = [UIAlertController alertControllerWithTitle:nil
+                                                                           message: nil
+                                                                    preferredStyle:UIAlertControllerStyleActionSheet];
         
-        /* first create a UIActionSheet, where you define a title, delegate and a button to close the sheet again */
+        for (NSDictionary *item in jsonArray)
+        {
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:item[@"station_name"]
+                                                                    style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action){
+                                                                      [self didSelectRowInAlertControler:item:Tag+10];
+                                                                  }];
+            [selectBox addAction:defaultAction];
+        }
+        
+        [self presentViewController:selectBox animated:YES completion:nil];
+        
+        /* first create a UIActionSheet, where you define a title, delegate and a button to close the sheet again
         actionSheet = [[UIActionSheet alloc] initWithTitle:Nil delegate:self cancelButtonTitle:@"Done" destructiveButtonTitle:nil otherButtonTitles:nil];
         
-        /* I always give my controls a tag, to make sure I can work with multiple actionsheets in one View (to identify them when an event triggers */
+        I always give my controls a tag, to make sure I can work with multiple actionsheets in one View (to identify them when an event triggers
         actionSheet.tag = Tag;
         actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
         
-        /* Initialize a UIPickerView with 100px space above it, for the button of the UIActionSheet. */
+        Initialize a UIPickerView with 100px space above it, for the button of the UIActionSheet.
         UIPickerView* positionPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0,30, 320, 200)];
         positionPicker.dataSource = self;
         positionPicker.delegate = self;
         [positionPicker setBackgroundColor:[UIColor lightGrayColor]];
         [actionSheet setBackgroundColor:[UIColor lightGrayColor]];
-        /* another unique tag for this UIPicker */
+        another unique tag for this UIPicker
         positionPicker.tag = Tag+10;
         
-        /* Add the UIPickerView to the UIActionSheet */
+        Add the UIPickerView to the UIActionSheet
         [actionSheet addSubview:positionPicker];
         
-        /* Select the previous selected value, which for me is stored in 'currentPosition' */
+        Select the previous selected value, which for me is stored in 'currentPosition'
         [positionPicker selectRow:1 inComponent:0 animated:NO];
         
-        /* Add the UIActionSheet to the view */
+        Add the UIActionSheet to the view
         [actionSheet showInView:self.view];
         
-        /* Make sure the UIActionSheet is big enough to fit your UIPickerView and it's buttons */
+        Make sure the UIActionSheet is big enough to fit your UIPickerView and it's buttons
         [actionSheet setBounds:CGRectMake(0,0, 320, 250)];
         
-        /* clean up */
+        clean up */
     }
 }
+
+-(void)didSelectRowInAlertControler:(NSDictionary*) row:(NSInteger) Tag
+{
+    Station.text = row[@"station_name"];
+}
+
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
 {
     UIColor *customTitleColor = [UIColor blueColor];

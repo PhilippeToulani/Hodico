@@ -34,8 +34,8 @@
     NSMutableArray *PlatSymbols;
     
     
-    NSMutableDictionary *SelectedType;
-    NSMutableDictionary *SelectedHP;
+    NSMutableDictionary *SelectedType ;
+    NSMutableDictionary *SelectedHP ;
     NSMutableDictionary *SelectedYear;
     NSString *SelectedSymbol;
     
@@ -402,46 +402,139 @@
 }
 -(void)showPickerWithTag:(NSInteger)Tag
 {
-    if ((Tag > 0 && Tag < 4) || Tag == 99) {
+    if ((Tag > 0 && Tag < 4) || Tag == 99)
+    {
+        NSString *myKey = @"car_type_id";//Default Values
+        NSString *myDescription = @"car_type_description";//Default Values
         
         /* first create a UIActionSheet, where you define a title, delegate and a button to close the sheet again */
-        actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Done" destructiveButtonTitle:nil otherButtonTitles:nil];
+        //actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Done" destructiveButtonTitle:nil otherButtonTitles:nil];
+        UIAlertController* selectBox = [UIAlertController alertControllerWithTitle:nil
+                                                                           message: nil
+                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+        selectBox.modalInPopover = true;
+        if(Tag == 1)
+        {
+            myKey = @"car_yearmake_id";//Default Values
+            myDescription = @"car_yearmake_description";//Default Values
+        }
+        else if (Tag ==2)
+        {
+            myKey = @"car_horsepower_id";//Default Values
+            myDescription = @"car_horsepower_description";//Default Values
+        }
+        else if (Tag == 3)
+        {
+            myKey = @"car_type_id";//Default Values
+            myDescription = @"car_type_description";//Default Values
+
+        }
+        
+        for (NSDictionary *item in jsonArray)
+        {
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:item[myDescription]
+                                                                    style:UIAlertActionStyleDefault
+                                                                    handler:^(UIAlertAction * action){
+                                                                    [self didSelectRowInAlertControler:item:Tag+10];
+                                                                    }];
+            [selectBox addAction:defaultAction];
+        }
+            
         
         /* I always give my controls a tag, to make sure I can work with multiple actionsheets in one View (to identify them when an event triggers */
-        actionSheet.tag = Tag;
-        actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
         
-        /* Initialize a UIPickerView with 100px space above it, for the button of the UIActionSheet. */
-        UIPickerView* positionPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0,30, 320, 200)];
-        positionPicker.dataSource = self;
-        positionPicker.delegate = self;
+        //UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+        //                                                      handler:^(UIAlertAction * action) {}];
+        //actionSheet.tag = Tag;
+        //actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
         
-        [positionPicker setBackgroundColor:[UIColor lightGrayColor]];
-        [actionSheet setBackgroundColor:[UIColor lightGrayColor]];
+        //[actionSheet addAction:defaultAction];
+        //[self presentViewController:actionSheet animated:YES completion:nil];
+        //CGRect  viewRect = CGRectMake(0, 50, 100, 100);
+        //UIView* toolView = [[UIView alloc] initWithFrame:viewRect];
+        
+        
+        //CGRect buttonOkFrame = CGRectMake(0, 25, 100, 30); //size & position of the button as placed on the toolView
+        
+        //Create the Select button & set the title
+        //UIButton *buttonOk = [[UIButton alloc] initWithFrame:buttonOkFrame];
+        //buttonOk.setTitle("Select", forState: UIControlState.Normal);
+        //buttonOk.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal);
+        //[toolView addSubview: buttonOk]; //add to the subview
+        
+        //add the toolbar to the alert controller
+        //[selectBox.view addSubview:toolView];
 
+        /* Initialize a UIPickerView with 100px space above it, for the button of the UIActionSheet. */
         
+        //UIPickerView* positionPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 300, 100)];
+        //positionPicker.dataSource = self;
+        //positionPicker.delegate = self;
+        //positionPicker.showsSelectionIndicator = true;
+        
+        //[positionPicker setBackgroundColor:[UIColor lightGrayColor]];
+        //[actionSheet setBackgroundColor:[UIColor lightGrayColor]];
+
+        //[selectBox.view addSubview:positionPicker];
         
         /* another unique tag for this UIPicker */
-        positionPicker.tag = Tag+10;
+        //positionPicker.tag = Tag+10;
         
         /* Add the UIPickerView to the UIActionSheet */
-        [actionSheet addSubview:positionPicker];
+        //[actionSheet addSubview:positionPicker];
         
         /* Select the previous selected value, which for me is stored in 'currentPosition' */
-        [positionPicker selectRow:0 inComponent:0 animated:NO];
+        //[positionPicker selectRow:0 inComponent:0 animated:NO];
         
         /* Add the UIActionSheet to the view */
-        [actionSheet showInView:self.view];
+        //[actionSheet showInView:self.view];
         
         /* Make sure the UIActionSheet is big enough to fit your UIPickerView and it's buttons */
-        [actionSheet setBounds:CGRectMake(0,0, 320, 250)];
+        //[selectBox setBounds:CGRectMake(0,0, 320, 250)];
         
         /* clean up */
-        
-        
-        
+        [self presentViewController:selectBox animated:YES completion:nil];
+        //[positionPicker reloadAllComponents];
+
     }
 }
+
+-(void)didSelectRowInAlertControler:(NSDictionary*) row:(NSInteger) Tag
+{
+    switch (Tag){
+        case 11:
+            
+            SelectedYear = row;
+            Year.text =  [SelectedYear objectForKey:@"car_yearmake_description"];
+            IDYear = [SelectedYear objectForKey:@"car_yearmake_id"];
+            break;
+            
+        case 12:
+            SelectedHP = row;
+            HPower.text =  [SelectedHP objectForKey:@"car_horsepower_description"];
+            IDHP =  [SelectedHP objectForKey:@"car_horsepower_id"];
+            break;
+            
+        case 13:
+            SelectedType = row;
+            Type.text =  [SelectedType objectForKey:@"car_type_description"];
+            IDType =  [SelectedType objectForKey:@"car_type_id"];
+            break;
+            
+        case 109:
+            SelectedSymbol = row;
+            //Symbol.text = [PlatSymbols objectAtIndex:row];
+            break;
+            
+        default:
+            
+            break;
+            
+    }
+    
+}
+
+
 #pragma mark PickerView Delegate
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
@@ -488,38 +581,40 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
+    NSInteger countofRows = 0;
     switch (pickerView.tag){
         case 11:
             
-            return [YearMake count];
+            countofRows = [YearMake count];
             break;
             
         case 12:
             
-            return[HorsePower count];
+            countofRows = [HorsePower count];
             break;
             
         case 13:
             
-            return [CarType count];
+            countofRows = [CarType count];
             break;
             
         case 109:
-            return [PlatSymbols count];
+            countofRows = [PlatSymbols count];
             break;
             
         default:
             
-            return 0;
+            countofRows = 0;
             break;
             
     }
+    return countofRows;
 }
+
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    
     switch (pickerView.tag){
         case 11:
             
