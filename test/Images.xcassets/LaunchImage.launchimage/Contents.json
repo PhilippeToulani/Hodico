@@ -43,6 +43,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "MAIN2-IP6s - iphone7.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
@@ -58,6 +59,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "MAIN2-IP6s-iphone6.png",
       "extent" : "full-screen",
       "scale" : "1x"
     },
