@@ -44,7 +44,8 @@
 @synthesize Station;
 
 - (IBAction)BackButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)Submit:(id)sender {
     [self dismissKeyboard];

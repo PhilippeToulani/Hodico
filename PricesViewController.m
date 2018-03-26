@@ -26,7 +26,8 @@ static NSMutableArray *PricesArray;
 @synthesize Unleaded,Super,Deisel;
 @synthesize Table;
 - (IBAction)BackButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)viewDidAppear:(BOOL)animated
 {

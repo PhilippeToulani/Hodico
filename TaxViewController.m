@@ -60,7 +60,8 @@
     [self StartLoading:HP];
 }
 - (IBAction)BackButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)ValueChanged:(id)sender {

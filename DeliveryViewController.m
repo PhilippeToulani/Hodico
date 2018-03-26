@@ -37,7 +37,8 @@ static NSMutableArray *PricesArray;
     return PricesArray;
 }
 - (IBAction)BackButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)SubmitButton:(id)sender {
     if ([Quantity.text isEqualToString:@""] || [Email.text isEqualToString:@""]||[Phone.text isEqualToString:@""]) {

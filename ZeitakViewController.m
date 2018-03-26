@@ -107,7 +107,8 @@
     [CurrentMileage resignFirstResponder];
 }
 - (IBAction)BackButton:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
